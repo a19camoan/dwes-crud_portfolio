@@ -1,0 +1,221 @@
+/* https://colorhunt.co/palette/fdf0d1ac7d8885586f643843 */
+:root {
+    --primary: #FDF0D1;
+    --secondary: #AC7D88;
+    --tertiary: #85586F;
+    --accent: #643843;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    text-align: center;
+}
+
+header {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+nav li {
+    color: var(--accent);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--primary);
+    transition: background-color 0.3s;
+}
+
+nav li:hover {
+    background-color: var(--tertiary);
+    color: var(--primary);
+}
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+a.back_400,
+a.nav>p {
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
+    color: var(--accent);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+a.back_400:hover,
+a.nav>p:hover {
+    background-color: var(--accent);
+    color: var(--secondary);
+}
+
+a.nav>p {
+    width: 10vw;
+    margin: 1% auto;
+    color: var(--primary);
+}
+
+aside {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 1rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+th,
+td {
+    border: 1px solid var(--tertiary);
+    padding: 0.5rem;
+}
+
+td.add {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+th {
+    background-color: var(--tertiary);
+    color: var(--primary);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--secondary);
+}
+
+tr:nth-child(even) {
+    background-color: var(--primary);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='password'],
+input[type='submit'] {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 0.1rem solid var(--tertiary);
+    border-radius: 5px;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+article {
+    width: 30%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+article div {
+    margin: 1rem;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+article a {
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--tertiary);
+    color: var(--primary);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+article a:hover {
+    background-color: var(--accent);
+}
+
+article.jobs {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 1rem;
+}
+
+img {
+    width: 5vw;
+    height: 5vw;
+    margin: 1rem;
+}
+
+article>div>img {
+    width: 15vw;
+    height: 30vh;
+    border: 3px solid var(--accent);
+    border-radius: 5px;
+}
+
+article.jobs>img {
+    width: 9vw;
+    height: 13vh;
+    border: 3px solid var(--accent);
+    border-radius: 5px;
+}
