@@ -81,6 +81,9 @@
                 if ($data) {
                     $data = ["error" => "El email ya existe"];
                     $this->renderHTML(CREATE_USER_VIEW, $data);
+                } elseif ($email === "" || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $data = ["error" => "Formato del email incorrecto"];
+                    $this->renderHTML(CREATE_USER_VIEW, $data);
                 } else {
                     $usuario->set([
                         "nombre" => trim(htmlspecialchars($_POST["nombre"])),

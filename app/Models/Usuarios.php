@@ -346,14 +346,16 @@
             $transport = Transport::fromDsn("smtp://mail:1025");
             $mailer = new Mailer($transport);
 
-            $mensaje = "Para activar su cuenta, haga clic en el siguiente enlace: http://"
-                . $_SERVER["HTTP_HOST"] . "/activate?token=" . $token;
+            $mensaje = "<p>Para activar su cuenta, haga clic en el siguiente enlace:</p>";
+            $mensaje .= "<a href='http://" . $_SERVER["HTTP_HOST"] . "/activate?token=" . $token
+                . "'>Activar cuenta</a>";
 
             $email = (new Email())
             ->from("gestor@portfolios.local")
             ->to($emailTo)
             ->subject("Activación de cuenta")
-            ->text($mensaje);
+            ->text($mensaje)
+            ->html($mensaje);
             $mailer->send($email);
         }
 
